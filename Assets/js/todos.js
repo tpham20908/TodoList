@@ -5,7 +5,7 @@ $("ul").on("click", "li", function() {
 
 // click X to fade out then remove a Todo
 $("ul").on("click", "span", function(event){
-  $(this).parent().fadeOut(1000, function(){
+  $(this).parent().fadeOut(300, function(){
     $(this).remove();
   });
   event.stopPropagation();
@@ -13,9 +13,18 @@ $("ul").on("click", "span", function(event){
 
 // grab a Todo Text from input
 $("input").keypress(function(event){
-  // Enter(13) hit by user
-  if (event.which === 13) {
+  // Enter(13) hit by user and input is not empty
+  if (event.which === 13 && $(this).val() !== "") {
     var newTodo = $(this).val();
+
+    // if new Todo is duplicated?
+    var todoText = "X " + newTodo;
+    $("li").each(function() {
+      if (todoText.toLowerCase() === $(this).text().toLowerCase()) {
+        alert("This todo has already existed!");
+      }
+    });
+
     // clear out input, it acts as a setter rather than a getter
     $(this).val("");
     // append newTodo to ul
