@@ -54,6 +54,23 @@ li:nth-child(2n) {
   background-color: #eee;
 }
 
+li:hover span {
+  width: 40px;
+  opacity: 1;
+}
+
+span {
+  background-color: red;
+  color: white;
+  text-align: center;
+  height: 40px;
+  width: 0;
+  display: inline-block;
+  margin-right: 20px;
+  transition: 0.2s linear;
+  opacity: 0;
+}
+
 .completed {
   color: gray;
   text-decoration: line-through;
