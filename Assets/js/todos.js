@@ -31,3 +31,8 @@ $("input").keypress(function(event){
     $("ul").append("<li><span>X</span> " + newTodo + "</li>");
   }
 });
+
+// toggle input when pencil icon clicked
+$(".fa-pencil").click(function() {
+  $("input").fadeToggle();
+});
