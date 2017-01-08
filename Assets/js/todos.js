@@ -18,17 +18,18 @@ $("input").keypress(function(event){
     var newTodo = $(this).val();
 
     // if new Todo is duplicated?
-    var todoText = "X " + newTodo;
     $("li").each(function() {
-      if (todoText.toLowerCase() === $(this).text().toLowerCase()) {
+      if (newTodo.toLowerCase() === $(this).text().toLowerCase().trim()) {
         alert("This todo has already existed!");
       }
     });
 
+
+
     // clear out input, it acts as a setter rather than a getter
     $(this).val("");
     // append newTodo to ul
-    $("ul").append("<li><span>X</span> " + newTodo + "</li>");
+    $("ul").append("<li><span><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></span> " + newTodo + "</li>");
   }
 });
 
