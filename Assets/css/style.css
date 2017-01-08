@@ -1,10 +1,64 @@
+body {
+  font-family: Roboto;
+  background: #EFEFBB; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #EFEFBB , #D4D3DD); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #EFEFBB , #D4D3DD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 main {
-  border: 2px solid gray;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 300px;
-  margin: 0 auto;
+  margin: 100px auto;
+  background-color: #eee;
+}
+
+h1 {
+  background-color: #22e;
+  color: white;
+  font-weight: normal;
+  font-size: 24px;
+  margin: 0;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+
+input {
+  height: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  margin: 0;
+  background-color: #eee;
+  padding: 0 20px;
+  font-size: 16px;
+}
+
+input:focus {
+  background-color: white;
+  border: 2px solid #22e;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  background-color: white;
+  height: 40px;
+  line-height: 40px;
+}
+
+li:nth-child(2n) {
+  background-color: #eee;
 }
 
 .completed {
   color: gray;
   text-decoration: line-through;
+}
+
+.fa-pencil {
+  float: right;
 }
