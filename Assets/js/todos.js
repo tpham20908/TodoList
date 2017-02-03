@@ -24,8 +24,6 @@ $("input").keypress(function(event){
       }
     });
 
-
-
     // clear out input, it acts as a setter rather than a getter
     $(this).val("");
     // append newTodo to ul
